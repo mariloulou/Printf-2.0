@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xmain.c                                            :+:      :+:    :+:   */
+/*   ft_whattodo.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/24 09:33:46 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/16 15:01:41 by mcassar          ###   ########.fr       */
+/*   Created: 2017/11/03 16:28:03 by mcassar           #+#    #+#             */
+/*   Updated: 2017/11/16 15:05:09 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
-#include "includes/libftprintf.h"
-#include <stdio.h>
+#include "../includes/libftprintf.h"
 
-int	main(void)
+void	ft_whattodo(va_list list)
 {
-	int ret1;
-	int ret2;
-
-	ret1 = printf("%%|\n");
-	ret2 = ft_printf("%%|\n");
-	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%5%|\n");
-	ret2 = ft_printf("%5%|\n");
-	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%-15%|\n");
-	ret2 = ft_printf("%-15%|\n");
-	printf("||%d||%d||\n", ret1, ret2);
+	t_v.i++;
+	ft_fire();
+	if (t_v.f[t_v.i] == 'c')
+		ft_printf_c(va_arg(list, int));
+	if (t_v.f[t_v.i] == '%')
+		ft_printf_percent();
 }

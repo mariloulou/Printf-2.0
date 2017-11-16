@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xmain.c                                            :+:      :+:    :+:   */
+/*   ft_reload.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/24 09:33:46 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/16 15:01:41 by mcassar          ###   ########.fr       */
+/*   Created: 2017/11/06 13:22:17 by mcassar           #+#    #+#             */
+/*   Updated: 2017/11/16 15:37:24 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
-#include "includes/libftprintf.h"
-#include <stdio.h>
+#include "../includes/libftprintf.h"
 
-int	main(void)
+void	ft_reload(void)
 {
-	int ret1;
-	int ret2;
+	while (t_v.f[t_v.i - 1] != '%')
+		t_v.i--;
+}
 
-	ret1 = printf("%%|\n");
-	ret2 = ft_printf("%%|\n");
-	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%5%|\n");
-	ret2 = ft_printf("%5%|\n");
-	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%-15%|\n");
-	ret2 = ft_printf("%-15%|\n");
-	printf("||%d||%d||\n", ret1, ret2);
+void	ft_fire(void)
+{
+	while (ft_is_flag(t_v.f[t_v.i]) == 1)
+		t_v.i++;
+}
+
+void	ft_rifle(int n)
+{
+	while (n > 1)
+	{
+		ft_putchar(t_v.o);
+		n--;
+	}
 }
