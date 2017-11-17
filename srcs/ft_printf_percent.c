@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 14:21:59 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/16 15:38:16 by mcassar          ###   ########.fr       */
+/*   Updated: 2017/11/17 11:28:03 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,25 @@ static void	ft_rifle_diff(int nb, char c)
 		ft_putchar(c);
 		nb--;
 	}
+}
+
+static int	ft_are_u_here_diff(char c)
+{
+	t_v.i--;
+	while (t_v.f[t_v.i] != '%')
+		t_v.i--;
+	t_v.i++;
+	while (t_v.f[t_v.i] != '%')
+	{
+		if (t_v.f[t_v.i] == c)
+		{
+			while (t_v.f[t_v.i] != '%')
+				t_v.i++;
+			return (1);
+		}
+		t_v.i++;
+	}
+	return (0);
 }
 
 static int	ft_howmany_diff(void)
@@ -42,27 +61,13 @@ static int	ft_howmany_diff(void)
 	return (ret);
 }
 
-static int	ft_are_u_here_diff(char c)
-{
-	t_v.i--;
-	while (t_v.f[t_v.i] != '%')
-		t_v.i--;
-	t_v.i++;
-	while (t_v.f[t_v.i] != '%')
-	{
-		if (t_v.f[t_v.i] == c)
-		{
-			while (t_v.f[t_v.i] != '%')
-				t_v.i++;
-			return (1);
-		}
-		t_v.i++;
-	}
-	return (0);
-}
-
 void		ft_printf_percent(void)
 {
+	if (ft_are_u_here_diff('.') == 1)
+	{
+		ft_putchar('%');
+		return ;
+	}
 	if (ft_are_u_here_diff('-') == 0)
 		ft_rifle_diff(ft_howmany_diff(), ' ');
 	ft_putchar('%');

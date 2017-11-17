@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:33:46 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/16 15:44:22 by mcassar          ###   ########.fr       */
+/*   Updated: 2017/11/17 14:49:25 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,10 @@ int	main(void)
 	int ret1;
 	int ret2;
 
-	ret1 = printf("%%|\n");
-	ret2 = ft_printf("%%|\n");
+	ret1 = printf("%X|\n", -42);
+	ret2 = ft_printf("%X|\n", -42);
 	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%5%|\n");
-	ret2 = ft_printf("%5%|\n");
-	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%-15%|\n");
-	ret2 = ft_printf("%-15%|\n");
+	ret1 = printf("%x|\n", 42);
+	ret2 = ft_printf("%x|\n", 42);
 	printf("||%d||%d||\n", ret1, ret2);
 }
