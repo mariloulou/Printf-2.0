@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xmain.c                                            :+:      :+:    :+:   */
+/*   ft_printf_ll.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/24 09:33:46 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/22 13:15:26 by mcassar          ###   ########.fr       */
+/*   Created: 2017/11/22 09:57:31 by mcassar           #+#    #+#             */
+/*   Updated: 2017/11/22 10:10:14 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
-#include "includes/libftprintf.h"
-#include <stdio.h>
+#include "../includes/libftprintf.h"
 
-int	main(void)
+void	ft_printf_ll(va_list list)
 {
-	int ret1;
-	int ret2;
-
-	ret1 = printf("%jx|\n", 4294967296);
-	ret2 = ft_printf("%jx|\n", 4294967296);
-	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%jx|\n", 4294967295);
-	ret2 = ft_printf("%jx|\n", 4294967295);
-	printf("||%d||%d||\n", ret1, ret2);
+	t_v.i = t_v.i + 2;
+	if (t_v.f[t_v.i] == 'x' || t_v.f[t_v.i] == 'X')
+		ft_printf_llx(va_arg(list, unsigned long long int));
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_s_itoa_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/17 11:31:23 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/22 11:13:27 by mcassar          ###   ########.fr       */
+/*   Created: 2017/11/22 10:57:37 by mcassar           #+#    #+#             */
+/*   Updated: 2017/11/22 11:12:55 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libftprintf.h"
 
-static int		ft_ms(int nb)
+static int		ft_ms(short int nb)
 {
 	int ret;
 
@@ -27,7 +27,7 @@ static int		ft_ms(int nb)
 	return (ret);
 }
 
-char			*ft_itoa_base(int nb, int base)
+char			*ft_s_itoa_base(short int nb, int base)
 {
 	char	*chart;
 	char	*ret;
