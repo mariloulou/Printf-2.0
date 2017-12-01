@@ -6,15 +6,19 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 14:23:22 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/17 14:25:03 by mcassar          ###   ########.fr       */
+/*   Updated: 2017/12/01 10:57:44 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/libftprintf.h"
 
 int	ft_strleni(char *str)
 {
 	int i;
 
 	i = 0;
+	if (str[i] == '0')
+		return (0);
 	while (str[i])
 		i++;
 	return (i);

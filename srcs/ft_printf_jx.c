@@ -6,11 +6,11 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 11:33:40 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/22 13:09:48 by mcassar          ###   ########.fr       */
+/*   Updated: 2017/11/23 09:27:36 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "../includes/libftprintf.h"
+#include "../includes/libftprintf.h"
 
 void	ft_printf_jx(uintmax_t nb)
 {

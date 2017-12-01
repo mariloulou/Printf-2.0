@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xmain.c                                            :+:      :+:    :+:   */
+/*   ft_precision.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/24 09:33:46 by mcassar           #+#    #+#             */
-/*   Updated: 2017/12/01 12:08:01 by mcassar          ###   ########.fr       */
+/*   Created: 2017/12/01 10:06:55 by mcassar           #+#    #+#             */
+/*   Updated: 2017/12/01 11:56:30 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
-#include "includes/libftprintf.h"
-#include <stdio.h>
+#include "../includes/libftprintf.h"
 
-int	main(void)
+int	ft_precision(void)
 {
-	int ret1;
-	int ret2;
+	int ret;
 
-	ret1 = printf("%10s is a string|\n", "this");
-	ret2 = ft_printf("%10s is a string|\n", "this");
-	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%5.2s is a string|\n", "this");
-	ret2 = ft_printf("%5.2s is a string|\n", "this");
-	printf("||%d||%d||\n", ret1, ret2);
+	ret = 0;
+	if (ft_are_u_here('.') == 0)
+		return (-1);
+	if (t_v.f[t_v.i + 1] < '1' || t_v.f[t_v.i + 1] > '9')
+		return (0);
+	t_v.i++;
+	while (t_v.f[t_v.i] >= '1' && t_v.f[t_v.i] <= '9')
+	{
+		ret = ret * 10;
+		ret = ret + t_v.f[t_v.i] - 48;
+		t_v.i++;
+	}
+	return (ret);
 }

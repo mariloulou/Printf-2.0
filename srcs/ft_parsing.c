@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xmain.c                                            :+:      :+:    :+:   */
+/*   ft_parsing.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/24 09:33:46 by mcassar           #+#    #+#             */
-/*   Updated: 2017/12/01 12:08:01 by mcassar          ###   ########.fr       */
+/*   Created: 2017/11/23 09:39:25 by mcassar           #+#    #+#             */
+/*   Updated: 2017/12/01 11:49:23 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/includes/libft.h"
-#include "includes/libftprintf.h"
-#include <stdio.h>
+#include "../includes/libftprintf.h"
 
-int	main(void)
+void	ft_hashtag(char c)
 {
-	int ret1;
-	int ret2;
-
-	ret1 = printf("%10s is a string|\n", "this");
-	ret2 = ft_printf("%10s is a string|\n", "this");
-	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%5.2s is a string|\n", "this");
-	ret2 = ft_printf("%5.2s is a string|\n", "this");
-	printf("||%d||%d||\n", ret1, ret2);
+	if (ft_are_u_here('#') == 0)
+		return ;
+	if (c == 'X')
+		ft_putstr("0X");
+	if (c == 'x')
+		ft_putstr("0x");
 }

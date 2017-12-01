@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 14:34:00 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/20 10:15:41 by mcassar          ###   ########.fr       */
+/*   Updated: 2017/12/01 12:01:05 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ int		ft_are_u_here(char c)
 void	ft_set_o(void)
 {
 	ft_reload();
+	if (t_v.f[t_v.i] == '#')
+		t_v.i++;
 	if (t_v.f[t_v.i] == '0')
 		t_v.o = '0';
 	else

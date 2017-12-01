@@ -6,7 +6,7 @@
 #    By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/24 09:06:53 by mcassar           #+#    #+#              #
-#    Updated: 2017/11/22 11:40:18 by mcassar          ###   ########.fr        #
+#    Updated: 2017/12/01 12:20:16 by mcassar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRCSLIST = ft_forflags.c \
 		   ft_j_itoa_base.c \
 		   ft_lu_itoa_base.c \
 		   ft_llu_itoa_base.c \
+		   ft_parsing.c \
+		   ft_precision.c \
 		   ft_printf.c \
 		   ft_printf_c.c \
 		   ft_printf_h.c \
@@ -32,6 +34,7 @@ SRCSLIST = ft_forflags.c \
 		   ft_printf_llx.c \
 		   ft_printf_lx.c \
 		   ft_printf_percent.c \
+		   ft_printf_s.c \
 		   ft_printf_x.c \
 		   ft_putchar.c \
 		   ft_s_itoa_base.c \
