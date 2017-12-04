@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/30 11:48:49 by mcassar           #+#    #+#             */
-/*   Updated: 2017/12/01 11:53:26 by mcassar          ###   ########.fr       */
+/*   Updated: 2017/12/04 10:13:13 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ void	ft_putnstr(char *str, int n)
 	int i;
 
 	i = 0;
-	while (str[i] && i < n)
+	while (str[i] && n > 0)
 	{
 		ft_putchar(str[i]);
 		i++;
+		n--;
 	}
 }
 

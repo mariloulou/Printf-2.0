@@ -6,7 +6,7 @@
 #    By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/24 09:06:53 by mcassar           #+#    #+#              #
-#    Updated: 2017/12/01 12:20:16 by mcassar          ###   ########.fr        #
+#    Updated: 2017/12/04 13:30:12 by mcassar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRCSLIST = ft_forflags.c \
 		   ft_printf_ll.c \
 		   ft_printf_llx.c \
 		   ft_printf_lx.c \
+		   ft_printf_o.c \
 		   ft_printf_percent.c \
 		   ft_printf_s.c \
 		   ft_printf_x.c \

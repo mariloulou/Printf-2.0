@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:19:30 by mcassar           #+#    #+#             */
-/*   Updated: 2017/12/01 12:20:13 by mcassar          ###   ########.fr       */
+/*   Updated: 2017/12/04 13:29:52 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void				ft_set_o(void);
 void				ft_whattodo(va_list list);
 
 void				ft_printf_c(char c);
+void				ft_printf_o(unsigned int n);
 void				ft_printf_s(char *str);
 void				ft_printf_x(unsigned int n, char c);
 
@@ -63,14 +64,15 @@ void				ft_printf_hx(int nb);
 void				ft_printf_hh(va_list list);
 void				ft_printf_hhx(int nb);
 
+void				ft_printf_j(va_list list);
+void				ft_printf_jx(uintmax_t nb);
+
 void				ft_printf_l(va_list list);
 void				ft_printf_lx(unsigned long int nb);
 
 void				ft_printf_ll(va_list list);
 void				ft_printf_llx(unsigned long long int nb, char c);
 
-void				ft_printf_j(va_list list);
-void				ft_printf_jx(uintmax_t nb);
 
 struct				s_v
 {

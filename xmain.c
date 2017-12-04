@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:33:46 by mcassar           #+#    #+#             */
-/*   Updated: 2017/12/01 12:08:01 by mcassar          ###   ########.fr       */
+/*   Updated: 2017/12/04 13:29:56 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	main(void)
 	int ret1;
 	int ret2;
 
-	ret1 = printf("%10s is a string|\n", "this");
-	ret2 = ft_printf("%10s is a string|\n", "this");
+	ret1 = printf("@moulitest: %.o|\n", 0);
+	ret2 = ft_printf("@moulitest: %.o|\n", 0);
 	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = printf("%5.2s is a string|\n", "this");
-	ret2 = ft_printf("%5.2s is a string|\n", "this");
+	ret1 = printf("@moulitest : %o %0o|\n", 0, 0);
+	ret2 = ft_printf("@moulitest : %o %0o|\n", 0, 0);
 	printf("||%d||%d||\n", ret1, ret2);
 }
