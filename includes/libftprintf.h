@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:19:30 by mcassar           #+#    #+#             */
-/*   Updated: 2017/12/04 13:29:52 by mcassar          ###   ########.fr       */
+/*   Updated: 2017/12/05 15:11:20 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ void				ft_printf_lx(unsigned long int nb);
 
 void				ft_printf_ll(va_list list);
 void				ft_printf_llx(unsigned long long int nb, char c);
-
 
 struct				s_v
 {
