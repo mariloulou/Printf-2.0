@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:19:30 by mcassar           #+#    #+#             */
-/*   Updated: 2017/12/05 15:11:20 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/22 16:25:12 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int					ft_strleni(char *str);
 
 void				ft_putchar(char c);
 void				ft_putstr(char *str);
+void				ft_putnbr(int c);
 void				ft_putnstr(char *str, int c);
 
 char				*ft_itoa_base(int nb, int base);
@@ -54,6 +55,7 @@ void				ft_set_o(void);
 void				ft_whattodo(va_list list);
 
 void				ft_printf_c(char c);
+void				ft_printf_d(int n);
 void				ft_printf_o(unsigned int n);
 void				ft_printf_s(char *str);
 void				ft_printf_x(unsigned int n, char c);

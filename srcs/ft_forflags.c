@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 14:34:00 by mcassar           #+#    #+#             */
-/*   Updated: 2017/12/04 11:26:41 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/22 13:50:06 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_howmany(void)
 	ret = 0;
 	ft_reload();
 	while (t_v.f[t_v.i] == '-' || t_v.f[t_v.i] == '+' || t_v.f[t_v.i] == ' ' ||
-			(t_v.f[t_v.i] == '#'))
+			(t_v.f[t_v.i] == '#' || t_v.f[t_v.i] == '0'))
 		t_v.i++;
 	while (t_v.f[t_v.i] >= '0' && t_v.f[t_v.i] <= '9')
 	{

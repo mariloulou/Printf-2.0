@@ -6,7 +6,7 @@
 #    By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/24 09:06:53 by mcassar           #+#    #+#              #
-#    Updated: 2017/12/05 15:11:10 by mcassar          ###   ########.fr        #
+#    Updated: 2018/01/22 16:25:31 by mcassar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCSLIST = ft_forflags.c \
 		   ft_precision.c \
 		   ft_printf.c \
 		   ft_printf_c.c \
+		   ft_printf_d.c \
 		   ft_printf_h.c \
 		   ft_printf_hh.c \
 		   ft_printf_hx.c \
@@ -38,6 +39,7 @@ SRCSLIST = ft_forflags.c \
 		   ft_printf_s.c \
 		   ft_printf_x.c \
 		   ft_putchar.c \
+		   ft_putnbr.c \
 		   ft_s_itoa_base.c \
 		   ft_shotgun.c \
 		   ft_strleni.c \

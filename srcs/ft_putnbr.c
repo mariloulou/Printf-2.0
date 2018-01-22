@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/24 09:26:35 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/18 11:53:18 by mcassar          ###   ########.fr       */
+/*   Created: 2017/09/11 09:23:28 by mcassar           #+#    #+#             */
+/*   Updated: 2018/01/22 13:51:52 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libftprintf.h"
 
-int	ft_printf(const char *format, ...)
+void	ft_putnbr(int c)
 {
-	va_list list;
-
-	t_v.i = 0;
-	t_v.ret = 0;
-	t_v.f = format;
-	t_v.flags = ".#-+ 0123456789";
-	va_start(list, format);
-	while (t_v.f[t_v.i])
+	if (c == -2147483648)
 	{
-		if (t_v.f[t_v.i] == '%')
-			ft_whattodo(list);
-		else
-			ft_putchar(t_v.f[t_v.i]);
-		t_v.i++;
+		ft_putstr("2147483648");
+		return ;
 	}
-	return (t_v.ret);
+	if (c < 0)
+	{
+		c = -c;
+	}
+	if (c >= 10)
+	{
+		ft_putnbr(c / 10);
+		ft_putnbr(c % 10);
+	}
+	else
+		ft_putchar(c + '0');
 }

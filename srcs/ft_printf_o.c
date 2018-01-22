@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 11:02:22 by mcassar           #+#    #+#             */
-/*   Updated: 2017/12/05 15:11:05 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/18 11:40:28 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,18 @@ static void	o_parsing(char *ret)
 	ft_reload();
 	if (t_v.f[t_v.i] == 'o')
 		return ;
-	ft_rifle(ft_howmany() - ft_strleni(ret));
+	ft_rifle(ft_howmany() - ft_strleni(ret) - 1);
 	if (ret[0] == '0')
 		return ;
-	if (ft_are_u_here('#') == 0 && ft_are_u_here('0') == 0)
-		ft_putchar(' ');
+	if ((ft_are_u_here('#') == 0) || (ft_are_u_here('#') == 1 &&
+				ft_are_u_here('-') == 1))
+		ft_putchar(t_v.o);
 	if (ft_are_u_here('-') == 0 && t_v.o == ' ')
 		ft_putchar(' ');
 	if (ft_are_u_here('.') == 1)
-		ft_rifle(ft_precision() - ft_strleni(ret));
+		ft_rifle(ft_precision() - ft_strleni(ret) - 1);
 	if (ft_are_u_here('0') == 1 && ft_are_u_here('-') == 0)
-		ft_putchar(' ');
+		ft_putchar(t_v.o);
 }
 
 static void	ft_o_set_o(void)
@@ -47,22 +48,29 @@ static void	ft_o_set_o(void)
 	}
 }
 
+void		ft_n_o(void)
+{
+	ft_reload();
+	t_v.o = ' ';
+	ft_rifle(ft_howmany());
+	if (ft_howmany() > 0)
+		ft_putchar(' ');
+	if (ft_precision() != 0)
+		ft_putchar('0');
+	if (ft_are_u_here('#') == 1)
+		ft_putchar('0');
+	ft_fire();
+	return ;
+}
+
 void		ft_printf_o(unsigned int n)
 {
-	char *ret;
-	int i;
+	char	*ret;
+	int		i;
 
 	i = 0;
 	if (n == 0)
-	{
-		ft_reload();
-		t_v.o = ' ';
-		ft_rifle(ft_howmany());
-		if (ft_howmany() > 0)
-			ft_putchar(' ');
-		ft_fire();
-		return ;
-	}
+		return (ft_n_o());
 	ft_o_set_o();
 	ret = ft_u_itoa_base(n, 8);
 	if (ft_are_u_here('-') == 0 || (ft_are_u_here('-') == 1 &&
