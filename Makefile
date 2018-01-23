@@ -6,7 +6,7 @@
 #    By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/24 09:06:53 by mcassar           #+#    #+#              #
-#    Updated: 2018/01/22 16:25:31 by mcassar          ###   ########.fr        #
+#    Updated: 2018/01/23 15:32:18 by mcassar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME = libftprintf.a
 OPTIONS = -c -Wall -Wextra -Werror
 
 SRCSDIR = srcs/
-SRCSLIST = ft_forflags.c \
+SRCSLIST = ft_bitoi.c \
+		   ft_dectoby.c \
+   		   ft_forflags.c \
 		   ft_itoa_base.c \
 		   ft_j_itoa_base.c \
 		   ft_lu_itoa_base.c \
@@ -31,17 +33,23 @@ SRCSLIST = ft_forflags.c \
 		   ft_printf_j.c \
 		   ft_printf_jx.c \
 		   ft_printf_l.c \
+		   ft_printf_lc.c \
 		   ft_printf_ll.c \
 		   ft_printf_llx.c \
+		   ft_printf_ls.c \
 		   ft_printf_lx.c \
 		   ft_printf_o.c \
+		   ft_printf_p.c \
 		   ft_printf_percent.c \
 		   ft_printf_s.c \
 		   ft_printf_x.c \
 		   ft_putchar.c \
+		   ft_putchar_unicode.c \
 		   ft_putnbr.c \
 		   ft_s_itoa_base.c \
 		   ft_shotgun.c \
+		   ft_strdup.c \
+		   ft_strlen.c \
 		   ft_strleni.c \
 		   ft_u_itoa_base.c \
 		   ft_whattodo.c \

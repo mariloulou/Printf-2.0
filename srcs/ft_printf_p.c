@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_l.c                                      :+:      :+:    :+:   */
+/*   ft_printf_p.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mcassar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 09:18:31 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/23 14:35:22 by mcassar          ###   ########.fr       */
+/*   Created: 2018/01/23 14:48:04 by mcassar           #+#    #+#             */
+/*   Updated: 2018/01/23 15:05:14 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libftprintf.h"
 
-void	ft_printf_l(va_list list)
+void	ft_printf_p(unsigned int n)
 {
-	t_v.i++;
-	if (t_v.f[t_v.i] == 'c')
-		ft_printf_lc(va_arg(list, wchar_t));
-	if (t_v.f[t_v.i] == 's')
-		ft_printf_ls(va_arg(list, wchar_t *));
-	if (t_v.f[t_v.i] == 'x' || t_v.f[t_v.i] == 'X')
-		ft_printf_lx(va_arg(list, unsigned long int));
+	char *ret;
+	ft_putstr("0x");
+	ret = ft_itoa_base(n, 16);
+	ft_putstr(ret);
+	free(ret);
 }
