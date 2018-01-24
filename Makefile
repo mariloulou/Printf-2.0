@@ -6,7 +6,7 @@
 #    By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/24 09:06:53 by mcassar           #+#    #+#              #
-#    Updated: 2018/01/23 15:32:18 by mcassar          ###   ########.fr        #
+#    Updated: 2018/01/24 15:34:27 by mcassar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,9 @@ SRCSLIST = ft_bitoi.c \
    		   ft_forflags.c \
 		   ft_itoa_base.c \
 		   ft_j_itoa_base.c \
+		   ft_l_putnbr.c \
+		   ft_ll_putnbr.c \
+		   ft_ll_itoa_base.c \
 		   ft_lu_itoa_base.c \
 		   ft_llu_itoa_base.c \
 		   ft_parsing.c \
@@ -27,14 +30,19 @@ SRCSLIST = ft_bitoi.c \
 		   ft_printf_c.c \
 		   ft_printf_d.c \
 		   ft_printf_h.c \
+		   ft_printf_hd.c \
 		   ft_printf_hh.c \
+		   ft_printf_hhd.c \
 		   ft_printf_hx.c \
 		   ft_printf_hhx.c \
 		   ft_printf_j.c \
+		   ft_printf_jd.c \
 		   ft_printf_jx.c \
 		   ft_printf_l.c \
 		   ft_printf_lc.c \
+		   ft_printf_ld.c \
 		   ft_printf_ll.c \
+		   ft_printf_lld.c \
 		   ft_printf_llx.c \
 		   ft_printf_ls.c \
 		   ft_printf_lx.c \
@@ -43,8 +51,8 @@ SRCSLIST = ft_bitoi.c \
 		   ft_printf_percent.c \
 		   ft_printf_s.c \
 		   ft_printf_x.c \
+		   ft_printf_zd.c \
 		   ft_putchar.c \
-		   ft_putchar_unicode.c \
 		   ft_putnbr.c \
 		   ft_s_itoa_base.c \
 		   ft_shotgun.c \

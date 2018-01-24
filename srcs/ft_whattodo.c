@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/03 16:28:03 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/23 14:56:29 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/24 15:23:35 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,14 @@ static void	ft_what_norm(va_list list)
 		ft_printf_ls(va_arg(list, wchar_t *));
 	else if (t_v.f[t_v.i] == 'd')
 		ft_printf_d(va_arg(list, int));
+	else if (t_v.f[t_v.i] == 'D')
+		ft_printf_ld(va_arg(list, long int));
 	else if (t_v.f[t_v.i] == 'p')
 		ft_printf_p(va_arg(list, unsigned int));
 	else if (t_v.f[t_v.i] == 'x' || t_v.f[t_v.i] == 'X')
 		ft_printf_x(va_arg(list, unsigned int), t_v.f[t_v.i]);
+	else if (t_v.f[t_v.i] == 'z' && t_v.f[t_v.i + 1] == 'd')
+		ft_printf_zd(va_arg(list, size_t));
 }
 
 void		ft_whattodo(va_list list)

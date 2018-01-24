@@ -6,7 +6,7 @@
 /*   By: mcassar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 11:53:15 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/23 15:04:00 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/24 11:31:32 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,17 +107,25 @@ static char	**ft_split_bytes(char *bytes, int nb)
 void		ft_printf_lc(wchar_t c)
 {
 	char	*bin;
+	char	*bin2;
 	int		m;
 	char	**tab;
 
 	if (c >= 55296 && c <= 57343)
 		return ;
-	bin = ft_dectoby(c);
-	m = ft_whichmask(ft_strlen(bin));
-	bin = ft_fill_mask(m, bin);
+	bin2 = ft_dectoby(c);
+	m = ft_whichmask(ft_strlen(bin2));
+	bin = ft_fill_mask(m, bin2);
+	free(bin2);
 	bin = ft_x_to_0(bin);
 	tab = ft_split_bytes(bin, m);
-	ft_bitoi(tab, m);
-	free(tab);
 	free(bin);
+	ft_bitoi(tab, m);
+	m++;
+	while (m >= 0)
+	{
+		free(tab[m]);
+		m--;
+	}
+	free(tab);
 }

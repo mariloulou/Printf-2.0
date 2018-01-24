@@ -1,52 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dectoby.c                                       :+:      :+:    :+:   */
+/*   ft_ll_putnbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcassar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/23 13:54:34 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/24 11:11:40 by mcassar          ###   ########.fr       */
+/*   Created: 2018/01/24 14:32:15 by mcassar           #+#    #+#             */
+/*   Updated: 2018/01/24 15:01:05 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libftprintf.h"
 
-static int	ft_mallocsize(int c)
+void	ft_ll_putnbr(long long int c)
 {
-	int ret;
+	char *ret;
 
-	ret = 0;
-	while (c > 0)
-	{
-		c = c / 2;
-		ret++;
-	}
-	return (ret);
-}
-
-static char	ft_char(int c)
-{
-	if (c == 1)
-		return ('1');
+	if (c < -9223372036854775807)
+		ft_putstr("-9223372036854775808");
 	else
-		return ('0');
-}
-
-char		*ft_dectoby(int c)
-{
-	int		i;
-	char	*ret;
-
-	ret = (char *)malloc(sizeof(char) * ft_mallocsize(c) + 1);
-	i = ft_mallocsize(c);
-	ret[i] = '\0';
-	i--;
-	while (i >= 0)
 	{
-		ret[i] = ft_char(c % 2);
-		c = c / 2;
-		i--;
+		ret = ft_ll_itoa_base(c, 10);
+		ft_putstr(ret);
+		free(ret);
 	}
-	return (ret);
 }

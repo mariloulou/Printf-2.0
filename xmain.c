@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:33:46 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/23 15:02:05 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/24 15:23:27 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ int	main(void)
 	int ret2;
 
 	setlocale(LC_ALL, "");
-	ret1 = ft_printf("%ls|\n", L"꿀벌");
-	ret2 = printf("%ls|\n", L"꿀벌");
-	printf("||%d||%d||\n", ret1, ret2);
-	ret1 = ft_printf("%lc|\n", L'꿀');
-	ret2 = printf("%lc|\n", L'꿀');
+	ret1 = ft_printf("%zd|\n", -1);
+	ret2 = printf("%zd|\n", -1);
 	printf("||%d||%d||\n", ret1, ret2);
 }

@@ -6,7 +6,7 @@
 /*   By: mcassar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/23 14:48:04 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/23 15:05:14 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/24 10:43:48 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_printf_p(unsigned int n)
 {
 	char *ret;
+
 	ft_putstr("0x");
 	ret = ft_itoa_base(n, 16);
 	ft_putstr(ret);

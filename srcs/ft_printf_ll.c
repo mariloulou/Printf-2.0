@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/22 09:57:31 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/23 11:42:38 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/24 14:35:12 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 void	ft_printf_ll(va_list list)
 {
 	t_v.i = t_v.i + 2;
+	if (t_v.f[t_v.i] == 'd')
+		ft_printf_lld(va_arg(list, unsigned long long int));
 	if (t_v.f[t_v.i] == 'x' || t_v.f[t_v.i] == 'X')
 		ft_printf_llx(va_arg(list, unsigned long long int), t_v.f[t_v.i]);
 }
