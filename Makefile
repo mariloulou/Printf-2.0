@@ -6,7 +6,7 @@
 #    By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/24 09:06:53 by mcassar           #+#    #+#              #
-#    Updated: 2018/01/24 15:34:27 by mcassar          ###   ########.fr        #
+#    Updated: 2018/01/25 14:41:16 by mcassar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,17 +33,22 @@ SRCSLIST = ft_bitoi.c \
 		   ft_printf_hd.c \
 		   ft_printf_hh.c \
 		   ft_printf_hhd.c \
-		   ft_printf_hx.c \
+		   ft_printf_hho.c\
 		   ft_printf_hhx.c \
+		   ft_printf_ho.c \
+		   ft_printf_hx.c \
 		   ft_printf_j.c \
 		   ft_printf_jd.c \
+		   ft_printf_jo.c \
 		   ft_printf_jx.c \
 		   ft_printf_l.c \
 		   ft_printf_lc.c \
 		   ft_printf_ld.c \
 		   ft_printf_ll.c \
 		   ft_printf_lld.c \
+		   ft_printf_llo.c \
 		   ft_printf_llx.c \
+		   ft_printf_lo.c \
 		   ft_printf_ls.c \
 		   ft_printf_lx.c \
 		   ft_printf_o.c \
@@ -52,6 +57,7 @@ SRCSLIST = ft_bitoi.c \
 		   ft_printf_s.c \
 		   ft_printf_x.c \
 		   ft_printf_zd.c \
+		   ft_printf_zo.c \
 		   ft_putchar.c \
 		   ft_putnbr.c \
 		   ft_s_itoa_base.c \

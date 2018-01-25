@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_o.c                                      :+:      :+:    :+:   */
+/*   ft_printf_lo.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mcassar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/04 11:02:22 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/25 11:14:11 by mcassar          ###   ########.fr       */
+/*   Created: 2018/01/25 12:28:34 by mcassar           #+#    #+#             */
+/*   Updated: 2018/01/25 12:31:06 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,12 @@
 
 static void	o_parsing(char *ret)
 {
-	ft_reload();
+	ft_fire();
 	if (t_v.f[t_v.i] == 'o')
 		return ;
 	ft_rifle(ft_howmany() - ft_strleni(ret) - 1);
 	if (ret[0] == '0')
 		return ;
-	if ((ft_are_u_here('#') == 0) || (ft_are_u_here('#') == 1 &&
-				ft_are_u_here('-') == 1))
-		ft_putchar(t_v.o);
-	if (ft_are_u_here('-') == 0 && t_v.o == ' ')
-		ft_putchar(' ');
 	if (ft_are_u_here('.') == 1)
 		ft_rifle(ft_precision() - ft_strleni(ret) - 1);
 	if (ft_are_u_here('0') == 1 && ft_are_u_here('-') == 0)
@@ -48,7 +43,8 @@ static void	ft_o_set_o(void)
 	}
 }
 
-void		ft_n_o(void)
+static void		ft_n_o(void)
+
 {
 	ft_reload();
 	t_v.o = ' ';
@@ -63,7 +59,7 @@ void		ft_n_o(void)
 	return ;
 }
 
-void		ft_printf_o(unsigned int n)
+void		ft_printf_lo(unsigned long int n)
 {
 	char	*ret;
 	int		i;
@@ -72,9 +68,9 @@ void		ft_printf_o(unsigned int n)
 	if (n == 0)
 		return (ft_n_o());
 	ft_o_set_o();
-	ret = ft_u_itoa_base(n, 8);
+	ret = ft_lu_itoa_base(n, 8);
 	if (ft_are_u_here('-') == 0 || (ft_are_u_here('-') == 1 &&
-			ft_are_u_here('.') == 1 && t_v.o == '0'))
+				ft_are_u_here('.') == 1 && t_v.o == '0'))
 	{
 		o_parsing(ret);
 		i++;
@@ -87,4 +83,5 @@ void		ft_printf_o(unsigned int n)
 		o_parsing(ret);
 	free(ret);
 	ft_fire();
+	t_v.i++;
 }

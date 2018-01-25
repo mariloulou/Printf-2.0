@@ -6,7 +6,7 @@
 /*   By: mcassar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/24 15:01:20 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/24 15:11:24 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/25 13:53:46 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static	void	ft_d_precision(int n)
 	ft_fire();
 }
 
-void			ft_printf_jd(uintmax_t n)
+void			ft_printf_jd(intmax_t n)
 {
 	if (ft_are_u_here('.') == 1)
 	{
