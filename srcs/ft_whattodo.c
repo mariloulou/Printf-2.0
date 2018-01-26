@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/03 16:28:03 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/25 13:57:34 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/26 16:15:59 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static void	ft_what_norm(va_list list)
 		ft_printf_j(list);
 	else if (t_v.f[t_v.i] == 'o')
 		ft_printf_o(va_arg(list, unsigned int));
+	else if (t_v.f[t_v.i] == 'O')
+		ft_printf_lo(va_arg(list, unsigned long int), 'O');
 	else if (t_v.f[t_v.i] == 's')
 		ft_printf_s(va_arg(list, char *));
 	else if (t_v.f[t_v.i] == 'S')
@@ -33,11 +35,7 @@ static void	ft_what_norm(va_list list)
 	else if (t_v.f[t_v.i] == 'p')
 		ft_printf_p(va_arg(list, unsigned int));
 	else if (t_v.f[t_v.i] == 'x' || t_v.f[t_v.i] == 'X')
-		ft_printf_x(va_arg(list, unsigned int), t_v.f[t_v.i]);
-	else if (t_v.f[t_v.i] == 'z' && t_v.f[t_v.i + 1] == 'd')
-		ft_printf_zd(va_arg(list, size_t));
-	else if (t_v.f[t_v.i] == 'z' && t_v.f[t_v.i + 1] == 'o')
-		ft_printf_zo(va_arg(list, size_t));
+		ft_printf_x(va_arg(list, unsigned int), t_v.f[t_v.i], 'x');
 }
 
 void		ft_whattodo(va_list list)
@@ -52,6 +50,8 @@ void		ft_whattodo(va_list list)
 		ft_printf_l(list);
 	else if (t_v.f[t_v.i] == 'l' && t_v.f[t_v.i + 1] == 'l')
 		ft_printf_ll(list);
+	else if (t_v.f[t_v.i] == 'z')
+		ft_printf_z(list);
 	else if ((t_v.f[t_v.i] >= 'a' && t_v.f[t_v.i] <= 'z') ||
 			(t_v.f[t_v.i] >= 'A' && t_v.f[t_v.i] <= 'Z'))
 		ft_what_norm(list);

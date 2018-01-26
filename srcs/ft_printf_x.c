@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 12:42:17 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/25 10:58:13 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/26 16:16:24 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,33 @@ static void	x_parsing(char *ret)
 		ft_rifle((ft_howmany() - ft_strleni(ret) - 1));
 }
 
-void		ft_printf_x(unsigned int n, char c)
+static char	*ft_format(unsigned long long int n, char f)
+{
+	if (f == 'x')
+		return (ft_u_itoa_base(n, 16));
+	if (f == 'h')
+		return (ft_u_itoa_base((unsigned short int)n, 16));
+	if (f == '1')
+		return (ft_u_itoa_base((unsigned char)n, 16));
+	if (f == 'l')
+		return (ft_lu_itoa_base((unsigned long int)n, 16));
+	if (f == '2')
+		return (ft_llu_itoa_base((unsigned long long int)n, 16));
+	if (f == 'j')
+		return (ft_j_itoa_base((uintmax_t)n, 16));
+	if (f == 'z')
+		return (ft_llu_itoa_base((size_t)n, 16));
+	else
+		return ("error");
+}
+
+void		ft_printf_x(unsigned long long int n, char c, char f)
 {
 	char	*ret;
 
 	ft_set_o();
 	ft_fire();
-	ret = ft_u_itoa_base(n, 16);
+	ret = ft_format(n, f);
 	if (ft_are_u_here('-') == 0 && ft_are_u_here('0') == 0)
 		x_parsing(ret);
 	if (n != 0)
@@ -53,4 +73,8 @@ void		ft_printf_x(unsigned int n, char c)
 	if (ft_are_u_here('-') == 1)
 		x_parsing(ret);
 	free(ret);
+	if (f == 'h' || f == 'l' || f == 'j' || f == 'z')
+		t_v.i++;
+	if (f == '1' || f == '2')
+		t_v.i = t_v.i + 2;
 }

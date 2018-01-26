@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_jx.c                                     :+:      :+:    :+:   */
+/*   ft_printf_z.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mcassar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 11:33:40 by mcassar           #+#    #+#             */
-/*   Updated: 2017/11/23 09:27:36 by mcassar          ###   ########.fr       */
+/*   Created: 2018/01/26 13:55:49 by mcassar           #+#    #+#             */
+/*   Updated: 2018/01/26 16:13:34 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libftprintf.h"
 
-void	ft_printf_jx(uintmax_t nb)
+void	ft_printf_z(va_list list)
 {
-	ft_putstr(ft_j_itoa_base(nb, 16));
+	t_v.i++;
+	if (t_v.f[t_v.i] == 'd')
+		ft_printf_zd(va_arg(list, size_t));
+	else if (t_v.f[t_v.i] == 'o')
+		ft_printf_zo(va_arg(list, size_t));
+	else if (t_v.f[t_v.i] == 'x' || t_v.f[t_v.i] == 'X')
+		ft_printf_x(va_arg(list, size_t), t_v.f[t_v.i], 'z');
 }

@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:19:30 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/25 14:05:29 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/26 16:13:25 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,35 +67,31 @@ void				ft_printf_d(int n);
 void				ft_printf_o(unsigned int n);
 void				ft_printf_p(unsigned int n);
 void				ft_printf_s(char *str);
-void				ft_printf_x(unsigned int n, char c);
+void				ft_printf_x(unsigned long long int n, char c, char f);
 
 void				ft_printf_h(va_list list);
 void				ft_printf_hd(int nb);
 void				ft_printf_ho(unsigned int n);
-void				ft_printf_hx(int n, char c);
 
 void				ft_printf_hh(va_list list);
 void				ft_printf_hhd(int nb);
 void				ft_printf_hho(unsigned int n);
-void				ft_printf_hhx(int nb);
 
 void				ft_printf_j(va_list list);
 void				ft_printf_jd(intmax_t nb);
 void				ft_printf_jo(uintmax_t nb);
-void				ft_printf_jx(uintmax_t nb);
 
 void				ft_printf_l(va_list list);
 void				ft_printf_lc(wchar_t c);
 void				ft_printf_ld(long int nb);
-void				ft_printf_lo(unsigned long int nb);
+void				ft_printf_lo(unsigned long int nb, char c);
 void				ft_printf_ls(wchar_t *str);
-void				ft_printf_lx(unsigned long int nb);
 
 void				ft_printf_ll(va_list list);
 void				ft_printf_lld(long long int nb);
 void				ft_printf_llo(unsigned long long int nb);
-void				ft_printf_llx(unsigned long long int nb, char c);
 
+void				ft_printf_z(va_list list);
 void				ft_printf_zd(size_t nb);
 void				ft_printf_zo(size_t nb);
 

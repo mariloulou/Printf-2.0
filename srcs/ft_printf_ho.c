@@ -6,13 +6,13 @@
 /*   By: mcassar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/25 10:57:08 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/25 12:24:13 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/26 13:25:00 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libftprintf.h"
 
-static void	o_parsing(char *ret)
+static void		o_parsing(char *ret)
 {
 	ft_fire();
 	if (t_v.f[t_v.i] == 'o')
@@ -26,7 +26,7 @@ static void	o_parsing(char *ret)
 		ft_putchar(t_v.o);
 }
 
-static void	ft_o_set_o(void)
+static void		ft_o_set_o(void)
 {
 	ft_set_o();
 	if (ft_are_u_here('.') == 1)
@@ -44,7 +44,6 @@ static void	ft_o_set_o(void)
 }
 
 static void		ft_n_o(void)
-
 {
 	ft_reload();
 	t_v.o = ' ';
@@ -59,7 +58,7 @@ static void		ft_n_o(void)
 	return ;
 }
 
-void		ft_printf_ho(unsigned int n)
+void			ft_printf_ho(unsigned int n)
 {
 	char	*ret;
 	int		i;
