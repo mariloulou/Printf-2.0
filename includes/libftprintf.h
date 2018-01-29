@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:19:30 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/26 16:13:25 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/29 16:08:05 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int					ft_precision(void);
 int					ft_printf(const char *format, ...);
 
 void				ft_fire(void);
+void				ft_push(char c);
 void				ft_hashtag(char c);
 void				ft_printf_percent(void);
 void				ft_reload(void);
@@ -67,6 +68,7 @@ void				ft_printf_d(int n);
 void				ft_printf_o(unsigned int n);
 void				ft_printf_p(unsigned int n);
 void				ft_printf_s(char *str);
+void				ft_printf_u(unsigned long long int nb, char c);
 void				ft_printf_x(unsigned long long int n, char c, char f);
 
 void				ft_printf_h(va_list list);

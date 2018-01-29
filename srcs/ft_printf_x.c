@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 12:42:17 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/26 16:16:24 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/29 14:16:17 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,5 @@ void		ft_printf_x(unsigned long long int n, char c, char f)
 	if (ft_are_u_here('-') == 1)
 		x_parsing(ret);
 	free(ret);
-	if (f == 'h' || f == 'l' || f == 'j' || f == 'z')
-		t_v.i++;
-	if (f == '1' || f == '2')
-		t_v.i = t_v.i + 2;
+	ft_push(f);
 }

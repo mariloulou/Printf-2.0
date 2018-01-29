@@ -6,7 +6,7 @@
 /*   By: mcassar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 12:05:31 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/24 15:23:00 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/29 14:05:01 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ static	void	ft_d_precision(int n)
 {
 	if (ft_precision() == 0 && n == 0)
 	{
+		t_v.o = ' ';
 		ft_rifle(ft_howmany() + 1);
 		ft_fire();
 		return ;

@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 13:22:17 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/24 13:59:23 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/29 13:42:42 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,12 @@ void	ft_rifle(int n)
 		ft_putchar(t_v.o);
 		n--;
 	}
+}
+
+void	ft_push(char c)
+{
+	if (c == 'h' || c == 'l' || c == 'j' || c == 'z')
+		t_v.i++;
+	if (c == '1' || c == '2')
+		t_v.i = t_v.i + 2;
 }

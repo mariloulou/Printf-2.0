@@ -6,7 +6,7 @@
 #    By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/24 09:06:53 by mcassar           #+#    #+#              #
-#    Updated: 2018/01/26 16:13:08 by mcassar          ###   ########.fr        #
+#    Updated: 2018/01/29 16:08:20 by mcassar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ SRCSLIST = ft_bitoi.c \
 		   ft_printf_p.c \
 		   ft_printf_percent.c \
 		   ft_printf_s.c \
+		   ft_printf_u.c \
 		   ft_printf_x.c \
 		   ft_printf_z.c \
 		   ft_printf_zd.c \
