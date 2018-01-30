@@ -6,7 +6,7 @@
 #    By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/24 09:06:53 by mcassar           #+#    #+#              #
-#    Updated: 2018/01/29 16:08:20 by mcassar          ###   ########.fr        #
+#    Updated: 2018/01/30 15:16:31 by mcassar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ OPTIONS = -c -Wall -Wextra -Werror
 SRCSDIR = srcs/
 SRCSLIST = ft_bitoi.c \
 		   ft_dectoby.c \
+		   ft_error.c \
    		   ft_forflags.c \
 		   ft_itoa_base.c \
 		   ft_j_itoa_base.c \

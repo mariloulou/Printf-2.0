@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:26:35 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/24 13:59:01 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/30 16:37:53 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_printf(const char *format, ...)
 	t_v.ret = 0;
 	t_v.f = format;
 	t_v.flags = ".#-+ 0123456789";
+	t_v.spec = "cdopsuxhjlz";
+	t_v.valid = "%.#-+0123456789cdopsuxhjlzXCSU";
 	va_start(list, format);
 	while (t_v.f[t_v.i])
 	{

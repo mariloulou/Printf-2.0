@@ -6,7 +6,7 @@
 /*   By: mcassar <mcassar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 09:19:30 by mcassar           #+#    #+#             */
-/*   Updated: 2018/01/29 16:08:05 by mcassar          ###   ########.fr       */
+/*   Updated: 2018/01/30 16:37:38 by mcassar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ size_t				ft_strlen(const char *s);
 */
 
 int					ft_are_u_here(char c);
+int					ft_error(void);
 int					ft_howmany(void);
 int					ft_is_flag(char c);
 int					ft_precision(void);
@@ -68,7 +69,7 @@ void				ft_printf_d(int n);
 void				ft_printf_o(unsigned int n);
 void				ft_printf_p(unsigned int n);
 void				ft_printf_s(char *str);
-void				ft_printf_u(unsigned long long int nb, char c);
+void				ft_printf_u(unsigned long long int nb, char c, char f);
 void				ft_printf_x(unsigned long long int n, char c, char f);
 
 void				ft_printf_h(va_list list);
@@ -101,6 +102,8 @@ struct				s_v
 {
 	const char		*flags;
 	const char		*f;
+	const char		*spec;
+	const char		*valid;
 	int				i;
 	int				ret;
 	char			o;
